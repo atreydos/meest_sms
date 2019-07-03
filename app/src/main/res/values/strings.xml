@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Meest SMS</string>
+
+    <string name="txt_message_sent_successfully">Message sent successfully</string>
+    <string name="hint_etRecipientNumber">Recipient number</string>
+    <string name="hint_etMessage">Message</string>
+    <string name="btnSend">Send</string>
+    <string name="txt_boot_description">Running  Security ProviderInstaller</string>
+</resources>
