@@ -16,7 +16,10 @@ import org.koin.core.qualifier.named
 @Layout(R.layout.activity_main)
 class MessagingActivity : BaseActivity() {
 
-    val model: MessagingViewModel by getKoin().createScope("messaging", named(Scope.MESSAGING.name)).inject()
+    val model: MessagingViewModel by getKoin().createScope(
+        MessagingActivity::class.java.simpleName,
+        named(Scope.MESSAGING.name)
+    ).inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,11 @@ class MessagingActivity : BaseActivity() {
             val message = etMessage.text.toString()
             model.sendSms(recipientNumber, message)
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        getKoin().getScope(MessagingActivity::class.java.simpleName).close()
     }
 
     private fun showProgress() {
