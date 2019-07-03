@@ -2,4 +2,4 @@
 
 Project description
 --------
-Simple app that demonstrate usage a bundle of the LiveData, Retrofit, RxJava and Koin in Android. On the example of the application for sending SMS messages using the server.
+This is a simple app that demonstrate usage a bundle of the LiveData, Retrofit, RxJava and Koin in Android. On the example of the application for sending SMS messages using the server.
